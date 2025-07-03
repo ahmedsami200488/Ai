@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>تشغيل بث MPD</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        video {
+            max-width: 90%;
+            max-height: 80vh;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+        }
+    </style>
+    <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+</head>
+<body>
+    <video data-dashjs-player autoplay controls preload="auto" src="https://scontent.fbgw15-3.fna.fbcdn.net/hvideo-eag-ldc/_nc_cat-109/_nc_sr_t-4/v/rASfIi2oy0mcl_e6OfmqDCUyF-8w6NXtcDJ5ucJSOLrvwnQ/_nc_ohc-K_CXGAh3wm8Q7kNvwFtCXRA/live-dash/dash-abr-ibr-audio/1286556976847675.mpd?_nc_zt=28&ccb=2-4&ms=m_CTPA&sc_t=1&oh=00_AfP0Jqeb1IBJ-X6euUnSx7Y1INxrBT5tOLGkx64Y25JqMQ&oe=6867B569"></video>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var video = document.querySelector("video");
+            var player = dashjs.MediaPlayer().create();
+            player.initialize(video, video.src, true);
+        });
+    </script>
+</body>
+</html>
 
