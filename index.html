@@ -1,36 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar">
 <head>
-    <title>تشغيل بث MPD</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-        video {
-            max-width: 90%;
-            max-height: 80vh;
-            border: 1px solid #ccc;
-            box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
-        }
-    </style>
-    <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+  <meta charset="UTF-8">
+  <title>Match 1 - Live</title>
+  <meta name="referrer" content="no-referrer" />
+  <style>
+    body { margin: 0; background: #000; }
+    #player { width: 100%; height: 100vh; }
+  </style>
+  <script src="https://cdn.jwplayer.com/libraries/SAHhwvZq.js"></script>
 </head>
 <body>
-    <video data-dashjs-player autoplay controls preload="auto" src="https://scontent.fbgw15-3.fna.fbcdn.net/hvideo-eag-ldc/_nc_cat-109/_nc_sr_t-4/v/rASfIi2oy0mcl_e6OfmqDCUyF-8w6NXtcDJ5ucJSOLrvwnQ/_nc_ohc-K_CXGAh3wm8Q7kNvwFtCXRA/live-dash/dash-abr-ibr-audio/1286556976847675.mpd?_nc_zt=28&ccb=2-4&ms=m_CTPA&sc_t=1&oh=00_AfP0Jqeb1IBJ-X6euUnSx7Y1INxrBT5tOLGkx64Y25JqMQ&oe=6867B569"></video>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var video = document.querySelector("video");
-            var player = dashjs.MediaPlayer().create();
-            player.initialize(video, video.src, true);
-        });
-    </script>
+  <div id="player"></div>
+  <script>
+    jwplayer("player").setup({
+      playlist: [{
+        sources: [{
+          file: "https://ahmedtv.online/fb/hvideo-ldc-prn/_nc_cat-101/_nc_sr_t-4/v/rASfdwY5kiFRc26KJPuTR015TlqakJyVyjccvVa-nqnwyWg/_nc_ohc-U8JgkG20Z-sQ7kNvwHvb0yK/live-dash/dash-abr-ibr-audio/122178584162303218_0.mpd?_nc_zt=28&ccb=2-4&lvp=1&ms=m_CN&p_bd=yonVXd8xhxF95IwqnLSD&sc_t=1&oh=00_AfOLmVmlid9_dgPi1jA9w1MNkfQI_XhyECNnKXRxp_o1vw&oe=684FE67D",
+          type: "dash"
+        }]
+      }],
+      autostart: true,
+      width: "100%",
+      height: "100%"
+    });
+  </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Match 1 - Live</title>
+  <meta name="referrer" content="no-referrer" />
+  <style>
+    body { margin: 0; background: #000; }
+    #player { width: 100%; height: 100vh; }
+  </style>
+  <script src="https://cdn.jwplayer.com/libraries/SAHhwvZq.js"></script>
+</head>
+<body>
+  <div id="player"></div>
+  <script>
+    jwplayer("player").setup({
+      playlist: [{
+        sources: [{
+          file: "https://scontent.fbgw15-3.fna.fbcdn.net/hvideo-eag-ldc/_nc_cat-109/_nc_sr_t-4/v/rASfIi2oy0mcl_e6OfmqDCUyF-8w6NXtcDJ5ucJSOLrvwnQ/_nc_ohc-K_CXGAh3wm8Q7kNvwFtCXRA/live-dash/dash-abr-ibr-audio/1286556976847675.mpd?_nc_zt=28&ccb=2-4&ms=m_CTPA&sc_t=1&oh=00_AfP0Jqeb1IBJ-X6euUnSx7Y1INxrBT5tOLGkx64Y25JqMQ&oe=6867B569",
+          type: "dash"
+        }]
+      }],
+      autostart: true,
+      width: "100%",
+      height: "100%"
+    });
+  </script>
 </body>
 </html>
-
